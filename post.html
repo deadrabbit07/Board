@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 60px;  
+        border-bottom: 1px solid grey;
+        opacity: 0.5;
+    }
+
+    .post_div{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <p>LOGO</p>
+    </header>
+
+    <div class="post_div">
+        <p>게시판 글 작성</p>
+
+        <input  class="title" type="text" placeholder="제목을 적어주세요">
+        <input  class="content" type="text" placeholder="내용을 적어주세요">        
+        
+        <div class="post_btn">
+            <button type="button" class="btn1">목록으로</button>
+            <button type="button" class="btn2">글 작성</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
