@@ -4,117 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/post.css">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-between;
-            padding: 25px 60px;
-            border-bottom: 1px solid grey;
-            opacity: 0.5;
-        }
-
-        .post_div {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 50px 220px;
-        }
-
-        .post_p {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            justify-content: space-between;
-            padding: 15px;
-            background-color: rgb(219, 219, 219);
-            font-size: x-large;
-            border: 1px solid gray;
-        }
-
-        .post_input {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .input_title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(232, 232, 232);
-            padding: 15px;
-            border: 1px solid gray;
-        }
-
-        .title {
-            padding: 15px;
-            width: 95%;
-            font-size: 24px;
-            border-radius: 5px;
-            border: none;
-        }
-
-        .input_content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(232, 232, 232);
-            padding: 15px;
-            border: 1px solid gray;
-        }
-
-        .content {
-            padding: 15px;
-            width: 95%;
-            height: 260px;
-            font-size: 24px;
-            resize: none;
-            border: none;
-        }
-
-
-        .post_btn {
-            display: flex;
-            justify-content: space-between;
-            padding: 70px 0;
-        }
-
-        .btn1 {
-            background-color: rgb(154, 154, 154);
-            padding: 8px;
-            color: white;
-            border-radius: 10px;
-            border: none;
-            width: 32%;
-            font-size: x-large;
-        }
-
-        .btn2 {
-            background-color: rgb(154, 154, 154);
-            padding: 8px;
-            color: white;
-            border-radius: 10px;
-            border: none;
-            width: 32%;
-            font-size: x-large;
-        }
-        .btn3{
-            background-color: rgb(154, 154, 154);
-            padding: 8px;
-            color: white;
-            border-radius: 10px;
-            border: none;
-            width: 32%;
-            font-size: x-large;
-        }
-    </style>
 </head>
 
 <body>
@@ -133,13 +25,13 @@
                 <input class="title" type="text" value="일단은 게시글 제목임">
             </div>
             <div class="input_content">
-                <textarea class="content">일단은 게시글 내용임</textarea>
+                <textarea class="content" placeholder="일단은 게시물 내용임"></textarea>
             </div>
         </div>
         <div class="post_btn">
-            <button type="button" class="btn1">목록으로</button>
-            <button type="button" class="btn3">글 수정</button>
-            <button type="button" class="btn2">글 작성</button>
+            <button type="button" class="btn">목록으로</button>
+            <button type="button" class="btn">글 수정</button>
+            <button type="button" class="btn">글 작성</button>
         </div>
     </div>
 
