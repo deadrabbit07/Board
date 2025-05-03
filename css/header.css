@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     display: flex;
     justify-content: center;
@@ -6,6 +11,11 @@
     padding: 25px 60px;  
     width: 90vw;
     border-bottom: 1px solid gray;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 .logo_header{
