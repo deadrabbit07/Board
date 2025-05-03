@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.login>p {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.login_input {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.login_input>input {
+    width: 230px;
+    height: 40px;
+    border-radius: 6px;
+    margin: 5px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    padding: 0 10px;
+}
+
+.login_input>input::placeholder {
+    color: grey;
+}
+
+.login_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.login_btn>p {
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 0;
+}
+
+.login_btn > p > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn1 > a{
+    color: white;
+}
+
+.btn1 {
+    background-color: rgb(167, 167, 167);
+    border: none;
+}
+
+.btn2 {
+    border: 2px solid grey;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.btn1:hover,
+.btn2:hover {
+    cursor: pointer;
+}

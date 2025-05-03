@@ -4,91 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-between;
-        padding: 25px 60px;  
-        border-bottom: 1px solid grey;
-        opacity: 0.5;
-    }
-    .login{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 100px;
-        width: 100%;
-    }
-    .login>p{
-        font-size: xx-large;
-        font-weight: bold;
-        /* width: 250px; 
-        text-align: left; */
-    }
-    .login_input{
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 15px;
-        }
-
-    .login_input>input{
-        width: 250px;
-        height: 40px;
-        border-radius: 6px;
-        margin: 5px;
-        background-color: rgb(219, 219, 219);
-        border: none;
-    }
-    .login_input>input::placeholder{
-        color: grey;
-        padding: 10px;
-    }
-
-    .login_btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .login_btn>button{
-        width: 250px;
-        height: 40px;
-        border-radius: 8px;
-        margin: 5px;
-    }
-    .btn1{
-        color: white;
-        background-color: rgb(167, 167, 167);
-        border: none;
-    }
-    .btn2{
-        border: 2px solid grey;
-        background-color: white;
-    }
-    
-
-</style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <header class="header">
-        <p>LOGO</p>
+        <p class="logo_header">BSC</p>
+        <p class="login_header"><a href="#">로그인</a></p>
     </header>
 
     <div class="login">
@@ -97,12 +19,11 @@
             <input type="text" placeholder="ID" class="login_input1">
             <input type="password" placeholder="Passsword" class="login_input2">
         </div>
-        <div class="login_btn">       
-            <button type="button" class="btn1">로그인</button>
-            <button type="button" class="btn2"><a href="./register.html">회원가입</a></button>
+        <div class="login_btn">
+            <p class="btn1"><a href="#">로그인</a></p>
+            <p class="btn2"><a href="register.html">회원가입</a></p>
         </div>    
     </div>
-
 
 </body>
 </html>
