@@ -1,33 +1,96 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-header {
-  width: 100%;
-  height: 100px;
-  border-bottom: 1px solid #d3d3d3;
-}
-header > ul {
-  display: flex;
-  justify-content: space-between;
-}
-header > ul > li {
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
   display: flex;
   align-items: center;
-  height: 100px;
-  padding: 40px;
-  font-size: 20px;
+  flex-direction: column;
 }
-header > ul > li:nth-child(1) {
+
+.tabs {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  margin: 0 20px;
+  margin-top: 100px;
+}
+
+.board-font {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.board-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.board-list div {
+  padding: 15px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.board-list .active {
+  border-bottom: 2px solid black;
   font-weight: bold;
 }
-header > ul > li > a {
-  color: black;
+
+.search-box {
+  flex-shrink: 0;
+  margin: 10px 0px 0px 0px;
+}
+
+.search-box input {
+  padding: 5px;
+  border: 1px solid #aaa;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.write-btn {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  padding: 12px 0;
+}
+
+.write-btn button {
+  padding: 10px 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ddd;
+  cursor: pointer;
 }

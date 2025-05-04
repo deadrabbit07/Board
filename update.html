@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board Project</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/post.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/post.css">
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <p class="logo_header">BSC</p>
-        <p class="login_header"><a href="login.html">로그인</a></p>
+      <p class="logo_header"><a href="./board.html">BSC</a></p>
+      <p class="login_header"><a href="#">로그인</a></p>
     </header>
 
     <div class="post_div">
-        <p>게시판 글 작성</p>
-        <div class="post_input">
-            <div class="input_title">
-                <input class="title" type="text" value="일단은 게시글 제목임">
-            </div>
-            <div class="input_content">
-                <textarea class="content"></textarea>
-            </div>
+      <p>게시판 글 작성</p>
+      <div class="post_input">
+        <div class="input_title">
+          <input class="title" type="text" value="일단은 게시글 제목임" />
         </div>
-        <div class="post_btn">
-            <button type="button" class="btn">목록으로</button>
-            <button type="button" class="btn">글 작성</button>
+        <div class="input_content">
+          <textarea class="content"></textarea>
         </div>
+      </div>
+      <div class="post_btn">
+        <button type="button" class="btn">목록으로</button>
+        <button type="button" class="btn">글 작성</button>
+      </div>
     </div>
-
-
-</body>
-
+  </body>
 </html>
