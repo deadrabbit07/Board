@@ -10,3 +10,12 @@ FLUSH PRIVILEGES;
 
 -- 테이블 생성
 USE board;
+
+-- 사용자 테이블
+CREATE TABLE IF NOT EXISTS user (
+  id VARCHAR(255) PRIMARY KEY, 
+  password VARCHAR(255) NOT NULL
+);
+
+-- 데이터 삽입
+INSERT INTO user (id, password) VALUES ('admin', '12345');

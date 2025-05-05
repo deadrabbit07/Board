@@ -18,4 +18,4 @@ EXPOSE 3000
 EXPOSE 3306
 
 # 7. 서버 실행 명령어
-CMD ["node", "src/index.js"]
+CMD ["npm","run","dev"]
