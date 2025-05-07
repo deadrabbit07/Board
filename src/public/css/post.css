@@ -16,6 +16,7 @@
     background-color: rgb(219, 219, 219);
     border: 1px solid gray;
     font-size: 18px;
+    
 }
 
 .post_input {
@@ -76,4 +77,7 @@
 }
 .post_p, .input_title{
     border-bottom: none;
+}
+.post_btn > button > a{
+    color: white;
 }
