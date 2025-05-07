@@ -25,3 +25,10 @@ a {
 .login_header {
   font-size: 20px;
 }
+
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
