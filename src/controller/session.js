@@ -32,7 +32,7 @@ exports.register = (req,res) => {
                         else return res.status(400).json({ message: "회원가입 실패, 아이디 또는 비밀번호를 확인해주세요 !" })
                 })
             }
-          
+        
         })
 }
 
@@ -43,4 +43,6 @@ exports.logout = (req, res) => {
     }
     else return res.status(201).json()
 }
+
+
 
