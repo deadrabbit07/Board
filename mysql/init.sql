@@ -26,4 +26,4 @@ CREATE TABLE board (
 );
 
 
-SELECT NOW();
+-- SELECT NOW();

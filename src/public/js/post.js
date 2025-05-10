@@ -1,8 +1,11 @@
 document.querySelector("#btn2").addEventListener("click", () => {
     const title = document.querySelector(".title").value
     const content = document.querySelector(".content").value
+
+    console.log(title)
+    console.log(content)
   
-    fetch(`http://localhost:3000/post`, {
+    fetch(`http://localhost:3000/post_make`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

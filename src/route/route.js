@@ -17,6 +17,7 @@ router.get("/logout", (req, res) => {
 
 router.post("/post_make", (req, res) => {
   board.post(req, res);
+  // board.post(req, res);
 });
 
 
