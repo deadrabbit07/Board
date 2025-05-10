@@ -1,4 +1,4 @@
-document.querySelector(".post_btn").addEventListener("click", () => {
+document.querySelector("#btn2").addEventListener("click", () => {
     const title = document.querySelector(".title").value
     const content = document.querySelector(".content").value
   
