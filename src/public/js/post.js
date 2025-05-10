@@ -14,7 +14,6 @@ document.querySelector("#btn2").addEventListener("click", () => {
     }).then(response => {
         if (response.status === 200) alert("글작성 성공")
         else if (response.status === 500) alert("서버 오류")
-        else if (response.status === 400) alert("글작성 실패")
-        // else if (response.status === 201) alert("이미  되어있습니다.")
     })
   })
+
