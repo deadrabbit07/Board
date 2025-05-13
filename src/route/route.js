@@ -20,5 +20,9 @@ router.post("/post_make", (req, res) => {
   // board.post(req, res);
 });
 
+router.post("/board", (req, res) => {
+  board.board(req, res);
+  // board.post(req, res);
+});
 
 module.exports = router;
