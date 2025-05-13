@@ -8,7 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # 4. 의존성 설치
-RUN npm install
+RUN npm install -g nodemon \
+    && npm install
+
 
 # 5. 프로젝트 전체 복사
 COPY . .

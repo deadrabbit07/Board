@@ -12,7 +12,7 @@ FLUSH PRIVILEGES;
 USE board;
 
 -- 사용자 테이블
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE user (
   id VARCHAR(20) PRIMARY KEY, 
   password VARCHAR(255) NOT NULL
 );
