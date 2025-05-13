@@ -12,7 +12,10 @@ document.querySelector(".btn1").addEventListener("click", () => {
       user_pw: pw,
     }),
   }).then((response) => {
-    if (response.status === 200) alert("회원가입 성공");
+    if (response.status === 200) {
+      alert("회원가입 성공");
+      window.location.href = 'index.html'
+    }
     else if (response.status === 500) alert("서버 오류");
     else if (response.status === 400) alert("회원가입 실패");
     else if (response.status === 201) alert("이미 회원가입 되어있습니다.");
