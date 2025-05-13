@@ -24,6 +24,3 @@ CREATE TABLE board (
   date DATE,
   maker VARCHAR(20)
 );
-
-
--- SELECT NOW();

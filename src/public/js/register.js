@@ -14,7 +14,7 @@ document.querySelector(".btn1").addEventListener("click", () => {
   }).then((response) => {
     if (response.status === 200) {
       alert("회원가입 성공");
-      window.location.href = 'index.html'
+      window.location.href = 'board.html'
     }
     else if (response.status === 500) alert("서버 오류");
     else if (response.status === 400) alert("회원가입 실패");

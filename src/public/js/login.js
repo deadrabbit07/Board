@@ -12,7 +12,10 @@ document.querySelector(".btn1").addEventListener("click", () => {
             user_pw: pw
         })
     }).then(response => {
-        if (response.status === 200) alert("로그인 성공")
+        if (response.status === 200){
+            alert("로그인 성공")
+            window.location.href = 'board.html'  
+        }
         else if (response.status === 500) alert("서버 오류")
         else if (response.status === 400) alert("로그인 실패")
         else if (response.status === 201) alert("이미 로그인 되어있습니다.")
