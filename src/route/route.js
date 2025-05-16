@@ -25,4 +25,9 @@ router.post("/board", (req, res) => {
   // board.post(req, res);
 });
 
+router.post("/check_my_post", (req, res) => {
+  board.check_my_post(req, res);
+});
+
+
 module.exports = router;

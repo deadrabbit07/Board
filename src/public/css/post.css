@@ -39,6 +39,8 @@
     font-size: 20px;
     border-radius: 5px;
     border: none;
+    font-weight: bold;
+    resize: none;
 }
 
 .input_content {

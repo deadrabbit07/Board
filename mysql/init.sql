@@ -17,10 +17,11 @@ CREATE TABLE user (
   password VARCHAR(255) NOT NULL
 );
 
--- 게시판 테이블
 CREATE TABLE board (
+  id VARCHAR(36) PRIMARY KEY,
   title VARCHAR(20),
   content VARCHAR(1000),
   date DATE,
   maker VARCHAR(20)
 );
+

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }).then(async (res) => {
         const result = await res.json();
-        console.log(result);
+        // console.log(result);
 
         result.forEach((post, index) => {
             const post_num = document.createElement('td');
@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const post_title = document.createElement('td');
             post_title.classList.add('post_title');
-            post_title.textContent = post.title;
+
+            const link = document.createElement('a');
+            link.href = `/check_my_post.html?id=${result[index].id}`;  
+            link.textContent = post.title;
+            post_title.appendChild(link);
 
             const maker = document.createElement('td');
             maker.classList.add('maker');
@@ -39,5 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             document.querySelector('.posts').appendChild(tr);
         });
+
     });
 });
