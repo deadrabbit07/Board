@@ -83,3 +83,6 @@
 .post_btn > button > a{
     color: white;
 }
+.post_btn > .delete, .update{
+    display: none;
+}

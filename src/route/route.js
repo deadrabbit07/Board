@@ -28,6 +28,13 @@ router.post("/board", (req, res) => {
 router.post("/check_my_post", (req, res) => {
   board.check_my_post(req, res);
 });
+router.get("/me", (req, res) => {
+  if (req.session.user) {
+    res.status(200).json({ user_id: req.session.user });
+  } else {
+    res.status(401).json({ user_id: null });
+  }
+});
 
 
 module.exports = router;

@@ -7,7 +7,7 @@ exports.post = (req, res) => {
     const post_title = req.body.post_title;
     const post_content = req.body.post_content;
 
-    const post_id = uuidv4();  // UUID 생성
+    const post_id = uuidv4();  // UUID 생성 36가지의 문자열로 되어있는 랜던값을 지정
 
     db.query(
         "INSERT INTO board (id, title, content, date, maker) VALUES (?, ?, ?, CURDATE(), ?);",
@@ -49,3 +49,4 @@ exports.check_my_post = (req, res) => {
         }
     );
 };
+

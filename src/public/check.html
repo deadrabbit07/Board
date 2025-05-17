@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Board Project</title>
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/post.css" />
+    <title>Board Project</title>
   </head>
 
   <body>
@@ -16,23 +16,22 @@
 
     <div class="post_div">
       <div class="post_p">
-        <p>작성자: ???</p>
-        <p>작성일자: ??-??-??</p>
+        <p class="maker"></p>
+        <p class="date"></p>
       </div>
       <div class="post_input">
         <div class="input_title">
-          <input class="title" type="text"/>
+          <!-- <input class="title" type="text" readonly></input> -->
+          <textarea class="title" readonly></textarea>
         </div>
         <div class="input_content">
-          <textarea
-            class="content"
-          ></textarea>
+          <textarea class="content" readonly></textarea>
         </div>
       </div>
       <div class="post_btn">
         <button type="button" class="btn"><a href="./board.html">목록으로</a></button>
       </div>
     </div>
-    <script src="./js/check.js"></script>
   </body>
+  <script src="./js/check.js"></script>
 </html>

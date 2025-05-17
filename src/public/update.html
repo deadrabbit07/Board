@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Board Project</title>
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/post.css" />
+    <title>Board Project</title>
   </head>
 
   <body>
@@ -15,10 +15,14 @@
     </header>
 
     <div class="post_div">
-      <p>게시판 글 작성</p>
+      <div class="post_p">
+        <p class="maker"></p>
+        <p class="date"></p>
+      </div>
       <div class="post_input">
         <div class="input_title">
-          <input class="title" type="text" value="일단은 게시글 제목임" />
+          <!-- <input class="title" type="text" readonly></input> -->
+          <textarea class="title"></textarea>
         </div>
         <div class="input_content">
           <textarea class="content"></textarea>
@@ -26,8 +30,9 @@
       </div>
       <div class="post_btn">
         <button type="button" class="btn"><a href="./board.html">목록으로</a></button>
-        <button type="button" class="btn"><a href="./board.html">글 작성</a></button>
+        <button type="button" class="btn"><a href="./board.html">글 수정 완료</a></button>
       </div>
     </div>
   </body>
+  <script src="js/update.js"></script>
 </html>
