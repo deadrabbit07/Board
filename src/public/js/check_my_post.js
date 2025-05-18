@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
-    // console.log(id);
+
     let currentUserId = null;
     try {
         const userRes = await fetch('http://localhost:3000/me');
@@ -36,4 +36,30 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         
     });
+    document.querySelector('.post_btn .update').addEventListener("click", () => {
+        window.location.href = `./update.html?id=${id}`;
+    });
+    document.querySelector('.post_btn .delete').addEventListener("click", async () => {
+        const confirmDelete = confirm("정말 삭제하시겠습니까?");
+        if (!confirmDelete) return;
+    
+        const response = await fetch("http://localhost:3000/delete_post", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ board_id: id })
+        });
+    
+        const result = await response.json();
+    
+        if (response.ok) {
+            alert("게시글이 삭제되었습니다.");
+            window.location.href = "./board.html";
+        } else {
+            alert(`삭제 실패: ${result.message}`);
+        }
+    });
+    
 });
+

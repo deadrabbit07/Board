@@ -35,6 +35,12 @@ router.get("/me", (req, res) => {
     res.status(401).json({ user_id: null });
   }
 });
+router.post("/update_post", (req, res) => {
+  board.update_post(req,res); 
+})
 
+router.post("/delete_post", (req, res) => {
+  board.delete_post(req, res);
+}) 
 
 module.exports = router;

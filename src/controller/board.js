@@ -37,11 +37,15 @@ exports.board = (req, res) => {
 };
 
 exports.check_my_post = (req, res) => {
+    const boardId = req.body.board_id;
+
+
     db.query(
         "SELECT id, title, content, DATE_FORMAT(date, '%Y-%m-%d') AS date, maker FROM board where id = ?;",
-        req.body.board_id,
+        [boardId],
         (err, result) => {
             if (err) {
+                console.error("DB 오류:", err); 
                 return res.status(500).json("서버 오류");
             } else {
                 return res.status(200).json(result);
@@ -49,4 +53,30 @@ exports.check_my_post = (req, res) => {
         }
     );
 };
+
+exports.update_post = (req, res) => {
+    const { board_id, title, content } = req.body;
+    const userId = req.session.user;
+
+    if (!userId) return res.status(401).json({ message: "로그인 필요" });
+
+    db.query("SELECT maker FROM board WHERE id = ?", [board_id], (err, rows) => {
+        if (err || rows.length === 0) return res.status(400).json({ message: "게시글이 없습니다" });
+        if (rows[0].maker !== userId) return res.status(403).json({ message: "수정 권한 없음" });
+
+        db.query("UPDATE board SET title = ?, content = ? WHERE id = ?", [title, content, board_id], (err2) => {
+            if (err2) return res.status(500).json({ message: "DB 오류" });
+            res.status(200).json({ message: "수정 완료" });
+        });
+    });
+};
+exports.delete_post = (req, res) => {
+    const board_id = req.body.board_id;
+    
+        // 삭제 실행
+        db.query("DELETE FROM board WHERE id = ?", [board_id], (err) => {
+            if (err) return res.status(500).json({ message: "삭제 실패" });
+            return res.status(200).json({ message: "삭제 완료" });
+        });
+    };
 
