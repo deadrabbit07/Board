@@ -25,7 +25,7 @@ exports.post = (req, res) => {
 
 exports.board = (req, res) => {
     db.query(
-        "SELECT id, title, content, DATE_FORMAT(date, '%Y-%m-%d') AS date, maker FROM board;",
+        "SELECT id, title, content, DATE_FORMAT(date, '%Y-%m-%d') AS date, maker, views FROM board;",
         (err, result) => {
             if (err) {
                 return res.status(500).json("서버 오류");
@@ -35,24 +35,39 @@ exports.board = (req, res) => {
         }
     );
 };
+
 
 exports.check_my_post = (req, res) => {
     const boardId = req.body.board_id;
 
-
+    // 1. 조회수 증가
     db.query(
-        "SELECT id, title, content, DATE_FORMAT(date, '%Y-%m-%d') AS date, maker FROM board where id = ?;",
+        "UPDATE board SET views = views + 1 WHERE id = ?",
         [boardId],
-        (err, result) => {
-            if (err) {
-                console.error("DB 오류:", err); 
+        (err1) => {
+            if (err1) {
+                console.error("조회수 증가 실패:", err1);
                 return res.status(500).json("서버 오류");
-            } else {
-                return res.status(200).json(result);
             }
+
+            // 2. 게시글 정보 조회
+            db.query(
+                "SELECT id, title, content, DATE_FORMAT(date, '%Y-%m-%d') AS date, maker, views FROM board WHERE id = ?;",
+                [boardId],
+                (err2, result) => {
+                    if (err2) {
+                        console.error("DB 오류:", err2); 
+                        return res.status(500).json("서버 오류");
+                    } else {
+                        return res.status(200).json(result);
+                    }
+                }
+            );
         }
     );
 };
+
+
 
 exports.update_post = (req, res) => {
     const { board_id, title, content } = req.body;

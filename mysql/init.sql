@@ -17,11 +17,14 @@ CREATE TABLE user (
   password VARCHAR(255) NOT NULL
 );
 
+
 CREATE TABLE board (
   id VARCHAR(36) PRIMARY KEY,
   title VARCHAR(20),
   content VARCHAR(1000),
   date DATE,
-  maker VARCHAR(20)
+  maker VARCHAR(20),
+  views INT DEFAULT 0
 );
+
 

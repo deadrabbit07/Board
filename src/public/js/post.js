@@ -4,7 +4,7 @@ document.querySelector("#btn2").addEventListener("click", () => {
 
     // console.log(title)
     // console.log(content)
-  
+
     fetch(`http://localhost:3000/post_make`, {
         method: 'POST',
         headers: {
@@ -21,5 +21,5 @@ document.querySelector("#btn2").addEventListener("click", () => {
         } 
         else if (response.status === 500) alert("서버 오류")
     })
-  })
+})
 
