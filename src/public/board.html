@@ -15,33 +15,34 @@
     <p class="login_header"><a href="./login.html">로그인</a></p>
   </header>
 
-  <div class="tabs">
-    <div class="board-font">게시판</div>
-    <div class="board-list">
-      <div class="active">자유게시판</div>
-      <div>질문게시판</div>
-    </div>
-    <div class="search-box">
-      <input type="text" placeholder="Search" />
-    </div>
-  </div>
-
-  <table>
-    <tbody class="posts">
-    </tbody>
+  <div class="board-font">게시판</div>
+  <table class="board">
+    <thead>
+      <tr class="list">
+        <!-- <th>번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+        <th>조회수</th> -->
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>날짜</th>
+        <th>조회수</th>
+      </tr>
+    </thead>
   </table>
+  <table>
+    <tbody>
+      <thead class="posts">
+      </thead>
+    </tbody>
+  </table>  
 
   <div class="write-btn">
     <button><a href="./post.html">글쓰기</a></button>
   </div>
-  <div class="pagination">
-    <button>&laquo;</button>
-    <button class="active">1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>&raquo;</button>
-  </div>
+ 
   <script src="js/board.js"></script>
 </body>
 
