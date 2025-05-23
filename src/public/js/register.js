@@ -23,9 +23,7 @@ document.querySelector(".btn1").addEventListener("click", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", async () => {
-  document.querySelector('.register_header').addEventListener("click", () => {
-    window.location.href = "./board.html";
-});
+  
 ddocument.querySelector('.login_header').addEventListener("click", async () => {
   let currentUserId = null;
   try {
@@ -53,4 +51,7 @@ let currentUserId = null;
     else{
         document.querySelector('.register_header').style.display = 'none';
     }
+})
+document.querySelector('.login_header').addEventListener("click", () => {
+  window.location.href = "./login.html"
 })

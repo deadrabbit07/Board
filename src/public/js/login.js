@@ -21,9 +21,7 @@ document.querySelector(".btn1").addEventListener("click", () => {
         else if (response.status === 201) alert("이미 로그인 되어있습니다.")
     })
 })
-document.querySelector('.register_header').addEventListener("click", () => {
-    window.location.href = "./board.html";
-});
+
 document.querySelector('.login_header').addEventListener("click", () => {
     window.location.href = "./login.html"
 })

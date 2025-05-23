@@ -69,9 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
 });
 
-document.querySelector('.register_header').addEventListener("click", () => {
-    window.location.href = "./board.html";
-});
+
 document.querySelector('.login_header').addEventListener("click", async () => {
     let currentUserId = null;
     try {
@@ -85,3 +83,17 @@ document.querySelector('.login_header').addEventListener("click", async () => {
         window.location.href = "./login.html"
     }
 })
+//로그아웃기능
+document.querySelector('.register_header').addEventListener("click", async () => {
+    try {
+        const res = await fetch('http://localhost:3000/logout');
+        if (res.status === 200) {
+            alert("로그아웃 되었습니다.");
+            window.location.href = "./login.html";
+        } else {
+            alert("로그아웃 실패 또는 이미 로그아웃된 상태입니다.");
+        }
+    } catch (err) {
+        console.error("로그아웃 요청 실패:", err);
+    }
+});
