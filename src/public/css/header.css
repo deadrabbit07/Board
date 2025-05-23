@@ -22,8 +22,20 @@ a {
   font-size: 20px;
 }
 
+.login_f{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
 .login_header {
+  cursor: pointer;
+
   font-size: 20px;
+}
+.register_header{
+  font-size: 20px;
+  cursor: pointer;
 }
 
 

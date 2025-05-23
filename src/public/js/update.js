@@ -11,7 +11,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("로그인 정보 불러오기 실패");
       return;
   }
-
+  if(currentUserId) {
+    document.querySelector('.login_header').textContent = currentUserId;
+}
+else{
+    document.querySelector('.register_header').style.display = 'none';
+}
+ 
   // 게시글 정보 가져오기
   const postRes = await fetch("http://localhost:3000/check_my_post", {
       method: "POST",

@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (err) {
         console.error("로그인 정보 불러오기 실패:", err);
     }
+    if(currentUserId) {
+        document.querySelector('.login_header').textContent = currentUserId;
+    }
+    else{
+        document.querySelector('.register_header').style.display = 'none';
+    }
 
     fetch(`http://localhost:3000/check_my_post`, {
         method: 'POST',
@@ -63,3 +69,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     
 });
 
+document.querySelector('.register_header').addEventListener("click", () => {
+    window.location.href = "./board.html";
+});
+document.querySelector('.login_header').addEventListener("click", () => {
+    window.location.href = "./login.html"
+})

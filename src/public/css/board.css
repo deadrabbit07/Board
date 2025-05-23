@@ -4,13 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+
+
 .board{
   margin-top: 5%;
 }

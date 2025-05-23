@@ -21,3 +21,33 @@ document.querySelector(".btn1").addEventListener("click", () => {
         else if (response.status === 201) alert("이미 로그인 되어있습니다.")
     })
 })
+document.querySelector('.register_header').addEventListener("click", () => {
+    window.location.href = "./board.html";
+});
+document.querySelector('.login_header').addEventListener("click", () => {
+    window.location.href = "./login.html"
+})
+document.addEventListener("DOMContentLoaded", async () => {
+let currentUserId = null;
+    try {
+        const userRes = await fetch('http://localhost:3000/me');
+        const userData = await userRes.json();
+        currentUserId = userData.user_id;
+    } catch (err) {
+        console.error("로그인 정보 불러오기 실패:", err);
+    }
+    if(currentUserId) {
+        document.querySelector('.login_header').textContent = currentUserId;
+    }
+    else{
+        document.querySelector('.register_header').style.display = 'none';
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector('.register_header').addEventListener("click", () => {
+        window.location.href = "./board.html";
+    });
+    document.querySelector('.login_header').addEventListener("click", () => {
+        window.location.href = "./login.html"
+    })
+})
