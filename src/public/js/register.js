@@ -24,7 +24,7 @@ document.querySelector(".btn1").addEventListener("click", () => {
 });
 document.addEventListener("DOMContentLoaded", async () => {
   
-ddocument.querySelector('.login_header').addEventListener("click", async () => {
+document.querySelector('.login_header').addEventListener("click", async () => {
   let currentUserId = null;
   try {
       const userRes = await fetch('http://localhost:3000/me');

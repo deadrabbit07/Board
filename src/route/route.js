@@ -38,7 +38,7 @@ router.get("/me", (req, res) => {
 router.post("/update_post", (req, res) => {
   board.update_post(req,res); 
 })
-
+  
 router.post("/delete_post", (req, res) => {
   board.delete_post(req, res);
 }) 
